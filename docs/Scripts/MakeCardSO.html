@@ -1,4 +1,4 @@
-<html><head><link href="code_snippet_template.css" rel="stylesheet"></head><body><div class='header-info'><b id='title-id'>Namespace:</b> <div style='color: green; font-weight: bold;'>AtleastOne.Editors.Cards</div><br><b id='title-id'>Class:</b> MakeCardSO<br><b id='title-id'>Class Description:</b> Editor class that creates the Card Scriptable Object for the game.<br><div class='all-methods'><b id='title-id'>All Methods:</b><ol><li><a href='#CreateCardSO'>CreateCardSO</a></li></ol></div><br><br><a href='#all-code'><b id='title-id'>View All Code - MakeCardSO.cs</b></a><br></div></div><br><div class='all_classes'><div class='namespace-item'><br><b id='title-id'>Namespace</b> - <b><div style='color: green; display: inline-block;'>AtleastOne.Editors.Cards</div></b><br><hr><div class='class-item'><a name=CreateCardSO></a><div class='snippet-text'><b id='title-id'>Class Name:</b> MakeCardSO<br><b id='title-id'>Method Name:</b> CreateCardSO<br><b id='title-id'>Method Description:</b> Creates the Card scriptable object and saves it to the Assets/CardData directory.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='myFunction("CreateCardSO-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='CreateCardSO-parameter'>None</div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='myFunction("CreateCardSO")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='CreateCardSO'><pre>
+<html><head><title>MakeCardSO.cs</title><link href="../css/code_snippet_template.css" rel="stylesheet"></head><body><div class='header-info'><b id='title-id'>Namespace:</b> <div style='color: green; font-weight: bold;'>AtleastOne.Editors.Cards</div><br><b id='title-id'>Class:</b> MakeCardSO<br><b id='title-id'>Class Description:</b> Editor class that creates the Card Scriptable Object for the game.<br><div class='all-methods'><b id='title-id'>All Methods:</b><ol><li><a href='#CreateCardSO'>CreateCardSO</a></li></ol></div><br><br><a href='#all-code'><b id='title-id'>View All Code - MakeCardSO.cs</b></a><br></div></div><br><div class='all_classes'><div class='namespace-item'><br><b id='title-id'>Namespace</b> - <b><div style='color: green; display: inline-block;'>AtleastOne.Editors.Cards</div></b><br><hr><div class='class-item'><a name=CreateCardSO></a><div class='snippet-text'><b id='title-id'>Class Name:</b> MakeCardSO<br><b id='title-id'>Method Name:</b> CreateCardSO<br><b id='title-id'>Method Description:</b> Creates the Card scriptable object and saves it to the Assets/CardData directory.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='myFunction("CreateCardSO-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='CreateCardSO-parameter'>None</div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='myFunction("CreateCardSO")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='CreateCardSO'><pre>
 public static void CreateCardSO()
 {
     CardSO asset = ScriptableObject.CreateInstance<CardSO>();
@@ -10,7 +10,8 @@ public static void CreateCardSO()
 
     Selection.activeObject = asset;
 }
-</pre></div></div><br></div></div></div><hr><br><a name='all-code'></a><div class='all-code-section'><b id='title-id'>All Code - MakeCardSO.cs</b><br><button id='code-preview-button' onclick='myFunction("all-code-anchor")'>Toggle Code</button><br><div class='all-code' id='all-code-anchor' style='display: none;'><pre>﻿using System.Collections;
+</pre></div></div><br></div></div></div><hr><br><a name='all-code'></a><div class='all-code-section'><b id='title-id'>All Code - MakeCardSO.cs</b><br><button id='code-preview-button' onclick='myFunction("all-code-anchor")'>Toggle Code</button><br><div class='all-code' id='all-code-anchor' style='display: none;'><pre>//!DOC
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -43,4 +44,4 @@ namespace AtleastOne.Editors.Cards
     }
     
 }
-</pre></div></div><script src='main.js'></script></body></html>
+</pre></div></div><script src='../js/main.js'></script></body></html>
