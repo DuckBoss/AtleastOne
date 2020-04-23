@@ -12,6 +12,7 @@ AtleastOneProject/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !AtleastOneProject/[Aa]ssets/**/*.meta
+*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # AtleastOneProject/[Aa]ssets/AssetStoreTools*
