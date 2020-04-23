@@ -1,0 +1,71 @@
+<html><head><link href="code_snippet_template.css" rel="stylesheet"></head><body><div class='header-info'><b id='title-id'>Namespace:</b> <div style='color: green; font-weight: bold;'>AtleastOne.Templates.Cards</div><br><b id='title-id'>Class:</b> Card<br><b id='title-id'>Class Description:</b> The base template class for cards in the game.<br><div class='all-methods'><b id='title-id'>All Methods:</b><ol><li><a href='#Card'>Card</a></li><li><a href='#GenerateCardID'>GenerateCardID</a></li><li><a href='#ToString'>ToString</a></li></ol></div><br><br><a href='#all-code'><b id='title-id'>View All Code - Card.cs</b></a><br></div></div><br><div class='all_classes'><div class='namespace-item'><br><b id='title-id'>Namespace</b> - <b><div style='color: green; display: inline-block;'>AtleastOne.Templates.Cards</div></b><br><hr><div class='class-item'><a name=Card></a><div class='snippet-text'><b id='title-id'>Class Name:</b> Card<br><b id='title-id'>Method Name:</b> Card<br><b id='title-id'>Method Description:</b> The Card constructor is used to create cards objects.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='myFunction("Card-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='Card-parameter'><div class='snippet-param'><div class='snippet-param-name'>cardNumber (int)</div>The number to assign to the card. </div><br><div class='snippet-param'><div class='snippet-param-name'>cardType (CardType.CardClassification)</div>The type/category of card to assign to the card. </div><br></div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='myFunction("Card")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='Card'><pre>
+public Card(int cardNumber, CardType.CardClassification cardType)
+{
+    this.CardNumber = cardNumber;
+    this.CardCategory = cardType;
+    this.GenerateCardID();
+}
+</pre></div></div><br><a name=GenerateCardID></a><div class='snippet-text'><b id='title-id'>Class Name:</b> Card<br><b id='title-id'>Method Name:</b> GenerateCardID<br><b id='title-id'>Method Description:</b> Generates a Card ID with the first letter of the category and the absolute value of the card number.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='myFunction("GenerateCardID-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='GenerateCardID-parameter'>None</div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='myFunction("GenerateCardID")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='GenerateCardID'><pre>
+protected void GenerateCardID()
+{
+    this.CardID = $"{this.CardCategory.ToString()[0]}{Mathf.Abs(this.CardNumber)}";
+}
+</pre></div></div><br><a name=ToString></a><div class='snippet-text'><b id='title-id'>Class Name:</b> Card<br><b id='title-id'>Method Name:</b> ToString<br><b id='title-id'>Method Description:</b> Returns a string interpretation of the card class.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='myFunction("ToString-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='ToString-parameter'>None</div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='myFunction("ToString")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='ToString'><pre>
+public override string ToString()
+{
+    return $"Card (ID - {this.CardID}, Number - {this.CardNumber}, Type - {this.CardCategory})";
+}
+</pre></div></div><br></div></div></div><hr><br><a name='all-code'></a><div class='all-code-section'><b id='title-id'>All Code - Card.cs</b><br><button id='code-preview-button' onclick='myFunction("all-code-anchor")'>Toggle Code</button><br><div class='all-code' id='all-code-anchor' style='display: none;'><pre>﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace AtleastOne.Templates.Cards
+{
+    
+    /*
+    Name: Card
+    Description: The base template class for cards in the game.
+    */
+    internal class Card
+    {
+        protected internal string CardID { get; set; }
+        protected internal int CardNumber { get; set; }
+        protected internal CardType.CardClassification CardCategory { get; set; }
+        
+        /*
+        Name: Card
+        Description: The Card constructor is used to create cards objects.
+        //!p The number to assign to the card. //#p
+        //!p The type/category of card to assign to the card. //#p
+        */
+        public Card(int cardNumber, CardType.CardClassification cardType)
+        {
+            this.CardNumber = cardNumber;
+            this.CardCategory = cardType;
+            this.GenerateCardID();
+        }
+        
+        
+        /*
+        Name: GenerateCardID
+        Description: Generates a Card ID with the first letter of the category and the absolute value of the card number.
+        */
+        protected void GenerateCardID()
+        {
+            this.CardID = $"{this.CardCategory.ToString()[0]}{Mathf.Abs(this.CardNumber)}";
+        }
+        
+        
+        /*
+        Name: ToString
+        Description: Returns a string interpretation of the card class.
+        */
+        public override string ToString()
+        {
+            return $"Card (ID - {this.CardID}, Number - {this.CardNumber}, Type - {this.CardCategory})";
+        }
+        
+    }
+    
+}
+</pre></div></div><script src='main.js'></script></body></html>
