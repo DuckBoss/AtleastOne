@@ -1,0 +1,109 @@
+:root {
+    --main-bg-color: #02010A;
+    --main-text-color: #F9F5E3;
+    --main-header-color: #FCFC62;
+    --secondary-bg-color: #022850;
+    --section-bg-color: #04052E;
+    --trim-color: #F1D9A7;
+    --mono-font: monospace;
+    --main-font: georgia;
+}
+
+html {
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: var(--mono-font);
+}
+#title-id {
+    color: var(--main-header-color);
+    text-decoration: underline;
+}
+.snippet-item {
+    border-radius:5px;
+    background: var(--secondary-bg-color);
+    color: var(--main-text-color);
+    overflow:auto;
+    border:solid var(--trim-color);
+    border-width:.15em .15em .15em .15em;
+    padding:.5em .5em;
+}
+.snippet-text {
+    border-radius:5px;
+    overflow:auto;
+    background: var(--section-bg-color);
+    color: var(--main-text-color);
+    width: auto;
+    padding:.5em .5em;
+    border-radius: 5px;
+    border:dashed var(--trim-color);
+    border-width:.1em .1em .1em .1em;
+}
+.snippet-param-name {
+    color: var(--main-header-color);
+}
+.snippet-params {
+    border-radius: 5px;
+    border:solid var(--trim-color);
+    border-width:.15em .15em .15em .15em;
+    padding:.2em .2em;
+    width: auto;
+}
+.header-info {
+    border-radius: 5px;
+    border:solid var(--trim-color);
+    border-width:.15em .15em .15em .15em;
+    padding:.2em .2em;
+    width: auto;
+}
+.header-info a {
+    text-decoration: none;
+    color: var(--main-header-color);
+}
+.header-info ol {
+    text-decoration: none;
+    color: var(--main-header-color);
+}
+pre {
+    margin: 1%;
+    line-height: 125%
+}
+button {
+    border-radius: 5px;
+    background-color: var(--secondary-bg-color);
+    text-decoration: none;
+    color: var(--main-text-color);
+    border: none;
+    transition-duration: 0.2s;
+    padding: 5px 5px;
+    display: inline-block;
+    text-align: center;
+    font-size: 11px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--trim-color);
+    color: var(--main-bg-color);
+}
+.all-code-section {
+    border-radius:5px;
+    overflow:auto;
+    background: var(--section-bg-color);
+    color: var(--main-text-color);
+    width: auto;
+    padding:.5em .5em;
+    border-radius: 5px;
+    border:dashed var(--trim-color);
+    border-width:.1em .1em .1em .1em;
+    text-decoration: none;
+}
+.all-code {
+    border-radius:5px;
+    background: var(--secondary-bg-color);
+    color: var(--main-text-color);
+    overflow:auto;
+    border:solid var(--trim-color);
+    border-width:.15em .15em .15em .15em;
+    padding:.5em .5em;
+    text-decoration: none;
+}
