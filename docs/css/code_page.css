@@ -48,11 +48,17 @@ html {
     padding:.2em .2em;
     width: auto;
 }
+.namespace-item {
+    padding:.5em .5em;
+}
+.class-item {
+    padding:.5em .5em;
+}
 .header-info {
     border-radius: 5px;
     border:solid var(--trim-color);
     border-width:.15em .15em .15em .15em;
-    padding:.2em .2em;
+    padding:.5em .5em;
     width: auto;
 }
 .header-info a {
