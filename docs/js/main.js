@@ -1,4 +1,4 @@
-function myFunction(elementID) {
+function toggleElement(elementID) {
   var x = document.getElementById(elementID);
   console.log(x.style.display)
   if (x.style.display === "none") {
