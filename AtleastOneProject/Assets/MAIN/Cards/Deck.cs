@@ -22,7 +22,7 @@ namespace AtleastOne.Templates.Deck
             set { _deckSize = value >= 0 ? value : 0; }
         }
 
-        protected internal List<Card> Cards;
+        protected internal Stack<Card> Cards;
 
         //!s
         /*
@@ -42,7 +42,44 @@ namespace AtleastOne.Templates.Deck
         */
         protected void Shuffle()
         {
-            this.Cards = this.Cards.OrderBy(i => System.Guid.NewGuid()).ToList();
+            this.Cards = new Stack<Card>(this.Cards.OrderBy(i => System.Guid.NewGuid()));
+        }
+        //#s
+
+        //!s
+        /*
+        Name: AddToTop
+        Description: Adds a card to the top of the deck.
+        //!p The Card object to add to the top of the deck //#p
+        */
+        protected void AddToTop(Card card)
+        {
+            this.Cards.Push(card);
+        }
+        //#s
+
+        //!s
+        /*
+        Name: AddToBottom
+        Description: Adds a card to the bottom of the deck.
+        //!p The Card object to add to the bottom of the deck //#p
+        */
+        protected void AddToBottom(Card card)
+        {
+            List<Card> temp = this.Cards.ToList();
+            temp.Insert(0, card);
+            this.Cards = new Stack<Card>(temp.ToArray());
+        }
+        //#s
+
+        //!s
+        /*
+        Name: Draw
+        Description: Draws a single card from the top of the deck.
+        */
+        protected Card Draw()
+        {
+            return this.Cards.Pop();
         }
         //#s
 

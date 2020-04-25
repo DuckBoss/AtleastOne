@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Deck.cs</title><link href="../css/code_page.css" rel="stylesheet"></head><body><div class='header-info'><b id='title-id'>Namespace:</b> <div style='color: cyan; font-weight: bold;'>AtleastOne.Templates.Deck</div><br><b id='title-id'>Class:</b> Deck<br><b id='title-id'>Class Description:</b> The Deck class holds cards and handles various deck operations such as shuffling.<br><div class='all-methods'><b id='title-id'>All Methods:</b><ol><li><a href='#Deck'>Deck</a></li><li><a href='#Shuffle'>Shuffle</a></li><li><a href='#ToString'>ToString</a></li></ol></div><br><br><div class='all-code-link'><a href='#all-code'><b id='title-id' style='color: #D35400'>View All Code - Deck.cs</b></a></div><br></div></div><br><div class='all_classes'><div class='namespace-item'><br><b id='title-id'>Namespace</b> - <b><div style='color: cyan; display: inline-block;'>AtleastOne.Templates.Deck</div></b><br><hr><div class='class-item'><a name=Deck></a><div class='snippet-text'><b id='title-id'>Class Name:</b><b style='color: lime;'> Deck</b><br><b id='title-id'>Method Name:</b><b style='color: magenta;'> Deck</b><br><b id='title-id'>Method Description:</b> The Deck constructur initializes the Deck class.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='toggleElement("Deck-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='Deck-parameter'><div class='snippet-param'><div class='snippet-param-name'>deckSize (int)</div>None</div><br></div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='toggleElement("Deck")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='Deck'><pre>
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Deck.cs</title><link href="../css/code_page.css" rel="stylesheet"></head><body><div class='header-info'><b id='title-id'>Namespace:</b> <div style='color: cyan; font-weight: bold;'>AtleastOne.Templates.Deck</div><br><b id='title-id'>Class:</b> Deck<br><b id='title-id'>Class Description:</b> The Deck class holds cards and handles various deck operations such as shuffling.<br><div class='all-methods'><b id='title-id'>All Methods:</b><ol><li><a href='#Deck'>Deck</a></li><li><a href='#Shuffle'>Shuffle</a></li><li><a href='#AddToTop'>AddToTop</a></li><li><a href='#AddToBottom'>AddToBottom</a></li><li><a href='#Draw'>Draw</a></li><li><a href='#ToString'>ToString</a></li></ol></div><br><br><div class='all-code-link'><a href='#all-code'><b id='title-id' style='color: #D35400'>View All Code - Deck.cs</b></a></div><br></div></div><br><div class='all_classes'><div class='namespace-item'><br><b id='title-id'>Namespace</b> - <b><div style='color: cyan; display: inline-block;'>AtleastOne.Templates.Deck</div></b><br><hr><div class='class-item'><a name=Deck></a><div class='snippet-text'><b id='title-id'>Class Name:</b><b style='color: lime;'> Deck</b><br><b id='title-id'>Method Name:</b><b style='color: magenta;'> Deck</b><br><b id='title-id'>Method Description:</b> The Deck constructur initializes the Deck class.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='toggleElement("Deck-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='Deck-parameter'><div class='snippet-param'><div class='snippet-param-name'>deckSize (int)</div>None</div><br></div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='toggleElement("Deck")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='Deck'><pre>
 public Deck(int deckSize)
 {
     this.DeckSize = deckSize;
@@ -6,7 +6,24 @@ public Deck(int deckSize)
 </pre></div></div><br><a name=Shuffle></a><div class='snippet-text'><b id='title-id'>Class Name:</b><b style='color: lime;'> Deck</b><br><b id='title-id'>Method Name:</b><b style='color: magenta;'> Shuffle</b><br><b id='title-id'>Method Description:</b> Shuffles the cards in the deck randomly by generating new random Guid's and sorting them.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='toggleElement("Shuffle-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='Shuffle-parameter'>None</div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='toggleElement("Shuffle")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='Shuffle'><pre>
 protected void Shuffle()
 {
-    this.Cards = this.Cards.OrderBy(i => System.Guid.NewGuid()).ToList();
+    this.Cards = new Stack&lt;Card&gt;(this.Cards.OrderBy(i => System.Guid.NewGuid()));
+}
+</pre></div></div><br><a name=AddToTop></a><div class='snippet-text'><b id='title-id'>Class Name:</b><b style='color: lime;'> Deck</b><br><b id='title-id'>Method Name:</b><b style='color: magenta;'> AddToTop</b><br><b id='title-id'>Method Description:</b> Adds a card to the top of the deck.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='toggleElement("AddToTop-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='AddToTop-parameter'><div class='snippet-param'><div class='snippet-param-name'>card (Card)</div>The Card object to add to the top of the deck </div><br></div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='toggleElement("AddToTop")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='AddToTop'><pre>
+protected void AddToTop(Card card)
+{
+    this.Cards.Push(card);
+}
+</pre></div></div><br><a name=AddToBottom></a><div class='snippet-text'><b id='title-id'>Class Name:</b><b style='color: lime;'> Deck</b><br><b id='title-id'>Method Name:</b><b style='color: magenta;'> AddToBottom</b><br><b id='title-id'>Method Description:</b> Adds a card to the bottom of the deck.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='toggleElement("AddToBottom-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='AddToBottom-parameter'><div class='snippet-param'><div class='snippet-param-name'>card (Card)</div>The Card object to add to the bottom of the deck </div><br></div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='toggleElement("AddToBottom")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='AddToBottom'><pre>
+protected void AddToBottom(Card card)
+{
+    List&lt;Card&gt; temp = this.Cards.ToList();
+    temp.Insert(0, card);
+    this.Cards = new Stack&lt;Card&gt;(temp.ToArray());
+}
+</pre></div></div><br><a name=Draw></a><div class='snippet-text'><b id='title-id'>Class Name:</b><b style='color: lime;'> Deck</b><br><b id='title-id'>Method Name:</b><b style='color: magenta;'> Draw</b><br><b id='title-id'>Method Description:</b> Draws a single card from the top of the deck.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='toggleElement("Draw-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='Draw-parameter'>None</div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='toggleElement("Draw")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='Draw'><pre>
+protected Card Draw()
+{
+    return this.Cards.Pop();
 }
 </pre></div></div><br><a name=ToString></a><div class='snippet-text'><b id='title-id'>Class Name:</b><b style='color: lime;'> Deck</b><br><b id='title-id'>Method Name:</b><b style='color: magenta;'> ToString</b><br><b id='title-id'>Method Description:</b> Returns a string representation of the Deck class.<br><br><b id='title-id'>Method Parameters:</b><br><button id='parameters-preview-button' onclick='toggleElement("ToString-parameter")'>Toggle Parameters Preview</button><div class='snippet-params' style='display: none;' id='ToString-parameter'>None</div><br><b id='title-id'>Code Preview:</b><br><button id='code-preview-button' onclick='toggleElement("ToString")'>Toggle Code Preview</button><div class='snippet-item' style='display: none;' id='ToString'><pre>
 public override string ToString()
@@ -35,7 +52,7 @@ namespace AtleastOne.Templates.Deck
             get { return _deckSize; }
             set { _deckSize = value >= 0 ? value : 0; }
         }
-        protected internal List&lt;Card&gt; Cards;
+        protected internal Stack&lt;Card&gt; Cards;
         
         /*
         Name: Deck
@@ -53,7 +70,41 @@ namespace AtleastOne.Templates.Deck
         */
         protected void Shuffle()
         {
-            this.Cards = this.Cards.OrderBy(i => System.Guid.NewGuid()).ToList();
+            this.Cards = new Stack&lt;Card&gt;(this.Cards.OrderBy(i => System.Guid.NewGuid()));
+        }
+        
+        
+        /*
+        Name: AddToTop
+        Description: Adds a card to the top of the deck.
+        //!p The Card object to add to the top of the deck //#p
+        */
+        protected void AddToTop(Card card)
+        {
+            this.Cards.Push(card);
+        }
+        
+        
+        /*
+        Name: AddToBottom
+        Description: Adds a card to the bottom of the deck.
+        //!p The Card object to add to the bottom of the deck //#p
+        */
+        protected void AddToBottom(Card card)
+        {
+            List&lt;Card&gt; temp = this.Cards.ToList();
+            temp.Insert(0, card);
+            this.Cards = new Stack&lt;Card&gt;(temp.ToArray());
+        }
+        
+        
+        /*
+        Name: Draw
+        Description: Draws a single card from the top of the deck.
+        */
+        protected Card Draw()
+        {
+            return this.Cards.Pop();
         }
         
         
