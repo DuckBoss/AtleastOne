@@ -59,6 +59,9 @@ html {
     text-decoration: none;
     color: var(--main-header-color);
 }
+.header-info a:hover {
+    color: var(--main-text-color);
+}
 .header-info ol {
     text-decoration: none;
     color: var(--main-header-color);

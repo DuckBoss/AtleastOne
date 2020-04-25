@@ -6,3 +6,6 @@
     text-decoration: none;
     color: var(--main-header-color);
 }
+.file-index a:hover {
+    color: var(--main-text-color);
+}
