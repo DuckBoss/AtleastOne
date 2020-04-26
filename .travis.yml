@@ -1,5 +1,4 @@
-sudo: required
-language: bash
+language: shell
 os: osx
 
 before_install:
