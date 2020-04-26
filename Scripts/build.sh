@@ -5,6 +5,9 @@ project="AtleastOne"
 echo "Attempting to build $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
+  -force-free \
+  -username "$U_USER" \
+  -password "$U_PASS" \
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
@@ -15,6 +18,9 @@ echo "Attempting to build $project for Windows"
 echo "Attempting to build $project for OS X"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
+  -force-free \
+  -username "$U_USER" \
+  -password "$U_PASS" \
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
@@ -25,6 +31,9 @@ echo "Attempting to build $project for OS X"
 echo "Attempting to build $project for Linux"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
+  -force-free \
+  -username "$U_USER" \
+  -password "$U_PASS" \
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
