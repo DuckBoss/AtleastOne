@@ -1,6 +1,6 @@
 #! /bin/sh
 
-BASE_URL=https://netstorage.unity3d.com/unity
+BASE_URL=https://download.unity3d.com/download_unity
 HASH=ceef2d848e70
 VERSION=2019.3.11f1
 
@@ -24,6 +24,10 @@ install() {
 # of available packages, where PLATFORM is `osx` or `win`
 
 install "MacEditorInstaller/Unity-$VERSION.pkg"
-install "MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-$VERSION.pkg"
-install "MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-$VERSION.pkg"
-install "MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-$VERSION.pkg"
+install "MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-$VERSION.pkg"
+install "MacEditorTargetInstaller/Unity.pkg"
+install "MacEditorTargetInstaller/UnitySetup-Linux-Mono-Support-for-Editor-$VERSION.pkg"
+
+# https://download.unity3d.com/download_unity/27ab2135bccf/MacEditorTargetInstaller/Unity.pkg
+# https://download.unity3d.com/download_unity/27ab2135bccf/MacEditorTargetInstaller/UnitySetup-Linux-Mono-Support-for-Editor-2019.3.0f6.pkg
+# https://download.unity3d.com/download_unity/27ab2135bccf/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2019.3.0f6.pkg
