@@ -82,7 +82,7 @@ button {
     color: var(--main-text-color);
     border: none;
     transition-duration: 0.2s;
-    padding: 5px 5px;
+    padding: 5px;
     display: inline-block;
     text-align: center;
     font-size: 11px;

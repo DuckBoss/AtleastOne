@@ -6,7 +6,6 @@ using UnityEngine;
 //!na
 namespace AtleastOne.Templates.Cards
 {
-    
     //!c
     /*
     Name: Card
