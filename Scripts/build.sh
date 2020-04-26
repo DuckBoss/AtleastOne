@@ -8,6 +8,7 @@ echo "Attempting to build $project for Windows"
   -force-free \
   -username "$U_USER" \
   -password "$U_PASS" \
+  -manualLicenceFile ./Unity_v2017.x.ulf \
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
@@ -21,6 +22,7 @@ echo "Attempting to build $project for OS X"
   -force-free \
   -username "$U_USER" \
   -password "$U_PASS" \
+  -manualLicenceFile ./Unity_v2017.x.ulf \
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
@@ -34,6 +36,7 @@ echo "Attempting to build $project for Linux"
   -force-free \
   -username "$U_USER" \
   -password "$U_PASS" \
+  -manualLicenceFile ./Unity_v2017.x.ulf \
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
