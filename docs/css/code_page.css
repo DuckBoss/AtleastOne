@@ -24,8 +24,8 @@ html {
     color: var(--main-text-color);
     overflow:auto;
     border:solid var(--trim-color);
-    border-width:.15em .15em .15em .15em;
-    padding:.5em .5em;
+    border-width:.15em;
+    padding:.5em;
 }
 .snippet-text {
     border-radius:5px;
@@ -33,10 +33,9 @@ html {
     background: var(--section-bg-color);
     color: var(--main-text-color);
     width: auto;
-    padding:.5em .5em;
-    border-radius: 5px;
+    padding:.5em;
     border:dashed var(--trim-color);
-    border-width:.1em .1em .1em .1em;
+    border-width:.1em;
 }
 .snippet-param-name {
     color: var(--main-header-color);
@@ -44,21 +43,21 @@ html {
 .snippet-params {
     border-radius: 5px;
     border:solid var(--trim-color);
-    border-width:.15em .15em .15em .15em;
-    padding:.2em .2em;
+    border-width:.15em;
+    padding:.2em;
     width: auto;
 }
 .namespace-item {
-    padding:.5em .5em;
+    padding:.5em;
 }
 .class-item {
-    padding:.5em .5em;
+    padding:.5em;
 }
 .header-info {
     border-radius: 5px;
     border:solid var(--trim-color);
-    border-width:.15em .15em .15em .15em;
-    padding:.5em .5em;
+    border-width:.15em;
+    padding:.5em;
     width: auto;
 }
 .header-info a {
@@ -100,10 +99,9 @@ button:hover {
     background: var(--section-bg-color);
     color: var(--main-text-color);
     width: auto;
-    padding:.5em .5em;
-    border-radius: 5px;
+    padding:.5em;
     border:dashed var(--trim-color);
-    border-width:.1em .1em .1em .1em;
+    border-width:.1em;
     text-decoration: none;
 }
 .all-code {
@@ -112,7 +110,7 @@ button:hover {
     color: var(--main-text-color);
     overflow:auto;
     border:solid var(--trim-color);
-    border-width:.15em .15em .15em .15em;
-    padding:.5em .5em;
+    border-width:.15em;
+    padding:.5em;
     text-decoration: none;
 }
