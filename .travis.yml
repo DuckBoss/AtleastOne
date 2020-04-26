@@ -1,5 +1,5 @@
-language: objective-c
-
+sudo: required
+language: bash
 os: osx
 
 before_install:
