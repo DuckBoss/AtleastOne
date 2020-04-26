@@ -12,3 +12,4 @@ install:
 
 script:
 - sudo -E sh ./Scripts/build.sh
+- rm Unity_v2017.x.ulf
